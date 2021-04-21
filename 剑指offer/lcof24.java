@@ -5,13 +5,13 @@ package 剑指offer;
 输入: 1->2->3->4->5->NULL
 输出: 5->4->3->2->1->NULL
  */
-public class lcof23 {
+public class lcof24 {
 }
 
 /*
 就地逆置，依次将节点插入到头节点前
  */
-class Solution23 {
+class Solution24 {
     public ListNode reverseList(ListNode head) {
         // 为了方便，加入一个不存储信息的头节点
         ListNode h = new ListNode(-1);
