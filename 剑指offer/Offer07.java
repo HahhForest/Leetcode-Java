@@ -7,14 +7,6 @@ package 剑指offer;
 
 import java.util.HashMap;
 
-/* Definition for a binary tree node.*/
-class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode(int x) { val = x; }
- }
-
 /*
 经典重建树
 通过【前序遍历列表】确定【根节点 (root)】
