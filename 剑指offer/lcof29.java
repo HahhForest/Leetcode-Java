@@ -64,11 +64,13 @@ class Solution29 {
                 --p; --q;
                 --right;
                 indicator = 3;
+                continue;
             }
             if(q < left){  // 左边撞墙
                 --p; ++q;
                 --down;
                 indicator = 4;
+                continue;
             }
             if(p < up){  // 上面撞墙
                 ++p; ++q;
