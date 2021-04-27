@@ -6,7 +6,7 @@ package 剑指offer;
 
 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1
  */
-public class Offer10_02 {
+public class lcof10_2 {
     public static void main(String[] args){
         System.out.println("Hello World");
     }

@@ -5,7 +5,7 @@ package 剑指offer;
 写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项（即 F(N)）
 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1
  */
-public class Offer10 {
+public class lcof10 {
     public static void main(String[] args){
         System.out.println("HelloWorld!");
     }

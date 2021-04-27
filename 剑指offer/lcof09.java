@@ -14,7 +14,7 @@ import java.util.Stack;
  * obj.appendTail(value);
  * int param_2 = obj.deleteHead();
  */
-public class Offer09 {
+public class lcof09 {
     public static void main(String[] args){
         System.out.println("Hello World");
     }
