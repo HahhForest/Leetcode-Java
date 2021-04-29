@@ -1,6 +1,9 @@
 package 剑指offer;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /*
 剑指 Offer 40. 最小的k个数
@@ -78,3 +81,83 @@ class Solution40_1 {
         return q;
     }
 }
+
+/**
+ * 使用堆排序
+ * 注意如果使用小根堆需要全部元素入堆，复杂度O(N) + K*O(logN) = O(KlogN)
+ * 使用维持一个容量为k的大根堆，若元素大于堆顶则不入堆，那最后这个堆里的就是前k小的数了
+ * 复杂度O(N) + N*O(logK) = O(NlogK)
+ */
+class Solution40_2 {
+    public int[] getLeastNumbers(int[] arr, int k) {
+        if (k == 0 || arr.length == 0) {
+            return new int[0];
+        }
+        // 默认是小根堆，实现大根堆需要重写一下比较器。
+        // lambda编程，给定v1, v2返回v2-v1
+        Queue<Integer> pq = new PriorityQueue<>((v1, v2) -> v2 - v1);
+        for (int num : arr) {
+            if (pq.size() < k) {
+                pq.offer(num);
+            } else if (num < pq.peek()) {
+                pq.poll();
+                pq.offer(num);
+            }
+        }
+
+        // 返回堆中的元素
+        int[] res = new int[pq.size()];
+        int idx = 0;
+        for (int num : pq) {
+            res[idx++] = num;
+        }
+        return res;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
