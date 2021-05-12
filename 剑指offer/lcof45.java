@@ -20,6 +20,30 @@ class Solution45{
             data[i] = String.valueOf(nums[i]);
         }
 
-        return null;
+        // 快速排序
+        quickSort(data, 0, data.length-1);
+        // 拼接答案
+        StringBuilder res = new StringBuilder();
+        for(String str : data)
+            res.append(str);
+
+        return res.toString();
+    }
+
+    // 快速排序划分函数
+    void quickSort(String[] strs, int left, int right){
+        if(left >= right)   return;
+
+        int p = left, q = right;
+        String flag = strs[left];
+        while(p < q){
+            while((strs[q] + flag).compareTo(flag + strs[q]) >= 0 && p < q)   q--;
+            while((strs[p] + flag).compareTo(flag + strs[p]) <= 0 && p < q)   p++;
+             String tmp = strs[p]; strs[p] = strs[q]; strs[q] = tmp;
+        }
+        strs[left] = strs[p]; strs[p] = flag;
+
+        quickSort(strs, left, p-1);
+        quickSort(strs, p+1, right);
     }
 }
