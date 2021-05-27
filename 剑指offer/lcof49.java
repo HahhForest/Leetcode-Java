@@ -44,3 +44,10 @@ class Solution49_1{
         return ugly[n-1];
     }
 }
+
+/*
+解法二，使用小根堆实现找到最小的构造用的已经存在的丑数
+ */
+class Solution49_2{
+
+}
